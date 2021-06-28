@@ -20,7 +20,7 @@ final class ThreeArgumentsSpec: QuickSpec {
             }
             
             it("should resolve Smuggler named with arguments") {
-                sut.register(type: Character.self) { _, arg0, arg1, arg2 in
+                sut.register(type: Character.self) { (_, arg0: String, arg1: String, arg2: String) in
                     Smuggler(name: arg0 + arg1 + arg2)
                 }
                 let resolvedSmuggler = sut.resolve(type: Character.self, arguments: "1", "2", "3")
@@ -28,7 +28,7 @@ final class ThreeArgumentsSpec: QuickSpec {
             }
             
             it("should resolve Smuggler by name with arguments") {
-                sut.register(type: Character.self, name: "Smuggler0") { _, arg0, arg1, arg2 in
+                sut.register(type: Character.self, name: "Smuggler0") { (_, arg0: String, arg1: String, arg2: String) in
                     Smuggler(name: arg0 + arg1 + arg2)
                 }
                 
@@ -37,10 +37,10 @@ final class ThreeArgumentsSpec: QuickSpec {
             }
             
             it("should resolve two different Smugglers by name with arguments") {
-                sut.register(type: Character.self, name: "Normal") { _, arg0, arg1, arg2 in
+                sut.register(type: Character.self, name: "Normal") { (_, arg0: String, arg1: String, arg2: String) in
                     Smuggler(name: arg0 + arg1 + arg2)
                 }
-                sut.register(type: Character.self, name: "Reversed") { _, arg0, arg1, arg2 in
+                sut.register(type: Character.self, name: "Reversed") { (_, arg0: String, arg1: String, arg2: String) in
                     Smuggler(name: arg2 + arg1 + arg0)
                 }
                 

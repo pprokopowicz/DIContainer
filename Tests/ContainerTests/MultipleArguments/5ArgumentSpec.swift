@@ -20,7 +20,7 @@ final class FiveArgumentsSpec: QuickSpec {
             }
             
             it("should resolve Smuggler named with arguments") {
-                sut.register(type: Character.self) { _, arg0, arg1, arg2, arg3, arg4 in
+                sut.register(type: Character.self) { (_, arg0: String, arg1: String, arg2: String, arg3: String, arg4: String) in
                     Smuggler(name: arg0 + arg1 + arg2 + arg3 + arg4)
                 }
                 let resolvedSmuggler = sut.resolve(type: Character.self, arguments: "1", "2", "3", "4", "5")
@@ -28,7 +28,7 @@ final class FiveArgumentsSpec: QuickSpec {
             }
             
             it("should resolve Smuggler by name with arguments") {
-                sut.register(type: Character.self, name: "Smuggler0") { _, arg0, arg1, arg2, arg3, arg4 in
+                sut.register(type: Character.self, name: "Smuggler0") { (_, arg0: String, arg1: String, arg2: String, arg3: String, arg4: String) in
                     Smuggler(name: arg0 + arg1 + arg2 + arg3 + arg4)
                 }
                 
@@ -37,10 +37,10 @@ final class FiveArgumentsSpec: QuickSpec {
             }
             
             it("should resolve two different Smugglers by name with arguments") {
-                sut.register(type: Character.self, name: "Normal") { _, arg0, arg1, arg2, arg3, arg4 in
+                sut.register(type: Character.self, name: "Normal") { (_, arg0: String, arg1: String, arg2: String, arg3: String, arg4: String) in
                     Smuggler(name: arg0 + arg1 + arg2 + arg3 + arg4)
                 }
-                sut.register(type: Character.self, name: "Reversed") { _, arg0, arg1, arg2, arg3, arg4 in
+                sut.register(type: Character.self, name: "Reversed") { (_, arg0: String, arg1: String, arg2: String, arg3: String, arg4: String) in
                     Smuggler(name: arg4 + arg3 + arg2 + arg1 + arg0)
                 }
                 
