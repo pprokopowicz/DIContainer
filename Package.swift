@@ -16,13 +16,20 @@ let package = Package(
             name: "Container",
             targets: ["Container"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/Quick/Nimble.git", from: "9.2.0"),
+        .package(url: "https://github.com/Quick/Quick.git", from: "4.0.0")
+    ],
     targets: [
         .target(
             name: "Container",
             dependencies: []),
         .testTarget(
             name: "ContainerTests",
-            dependencies: ["Container"]),
+            dependencies: [
+                .target(name: "Container"),
+                .product(name: "Nimble", package: "Nimble"),
+                .product(name: "Quick", package: "Quick")
+            ]),
     ]
 )

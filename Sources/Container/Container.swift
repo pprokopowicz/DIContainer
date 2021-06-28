@@ -14,7 +14,7 @@ public final class Container: DependencyContainer {
     
     // MARK: - Init
     
-    private init() {}
+    public init() {}
     
     // MARK: - Registrant
     
@@ -37,20 +37,21 @@ public final class Container: DependencyContainer {
     
     // MARK: - Resolver
     
-    func _resolve<Service, Arguments>(
+    internal func _resolve<Service, Arguments>(
         name: String?,
         invoker: @escaping ((Arguments) -> Any) -> Any
     ) -> Service? {
         let dependencyKey = DependencyKey(type: Service.self, name: name)
-        let entry = dependecies[dependencyKey]!
+        let entry = dependecies[dependencyKey]
         return resolve(entry: entry, invoker: invoker)
     }
     
     private func resolve<Service, Factory>(
-            entry: ServiceEntryProtocol,
+            entry: ServiceEntryProtocol?,
             invoker: (Factory) -> Any
         ) -> Service? {
-        let resolvedInstance = invoker(entry.factory as! Factory)
+        guard let entry = entry, let factory = entry.factory as? Factory else { return nil }
+        let resolvedInstance = invoker(factory)
         return resolvedInstance as? Service
     }
     
