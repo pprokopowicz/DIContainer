@@ -20,7 +20,7 @@ final class OneArgumentsSpec: QuickSpec {
             }
             
             it("should resolve Smuggler named with argument") {
-                sut.register(type: Character.self) { _, name in
+                sut.register(type: Character.self) { (_, name: String) in
                     Smuggler(name: name)
                 }
                 let resolvedSmuggler = sut.resolve(type: Character.self, argument: "Han")
@@ -28,7 +28,7 @@ final class OneArgumentsSpec: QuickSpec {
             }
             
             it("should resolve Smuggler by name with argument") {
-                sut.register(type: Character.self, name: "Smuggler0") { _, name in
+                sut.register(type: Character.self, name: "Smuggler0") { (_, name: String) in
                     Smuggler(name: name)
                 }
                 
@@ -37,10 +37,10 @@ final class OneArgumentsSpec: QuickSpec {
             }
             
             it("should resolve two different Smugglers by name with argument") {
-                sut.register(type: Character.self, name: "Smuggler0") { _, name in
+                sut.register(type: Character.self, name: "Smuggler0") { (_, name: String) in
                     Smuggler(name: name)
                 }
-                sut.register(type: Character.self, name: "Smuggler1") { _, name in
+                sut.register(type: Character.self, name: "Smuggler1") { (_, name: String) in
                     Smuggler(name: name)
                 }
                 
