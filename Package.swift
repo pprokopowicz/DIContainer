@@ -15,7 +15,11 @@ let package = Package(
         .library(
             name: "DIContainer",
             type: .dynamic,
-            targets: ["DIContainer", "DIContainerBinary"]
+            targets: ["DIContainer"]
+        ),
+        .library(
+            name: "DIContainerBin",
+            targets: ["DIContainerBinary"]
         )
     ],
     dependencies: [
