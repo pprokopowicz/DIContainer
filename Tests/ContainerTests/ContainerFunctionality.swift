@@ -4,6 +4,7 @@ import Container
 
 final class NoArgumentsSpec: QuickSpec {
     
+    // swiftlint:disable:next function_body_length
     override func spec() {
         describe("Container without arguments") {
             var sut: Container!

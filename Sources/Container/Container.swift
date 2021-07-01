@@ -18,7 +18,7 @@ public final class Container: DependencyContainer {
     
     // MARK: - Registrant
     
-    func _register<Service, Arguments>(
+    internal func baseRegister<Service, Arguments>(
         type: Service.Type,
         name: String? = nil,
         factory: @escaping (Arguments) -> Any
@@ -28,16 +28,16 @@ public final class Container: DependencyContainer {
     }
     
     public func register<Service>(type: Service.Type, name: String?, factory: @escaping (Resolver) -> Service) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
     
     public func register<Service>(type: Service.Type, factory: @escaping (Resolver) -> Service) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
     
     // MARK: - Resolver
     
-    internal func _resolve<Service, Arguments>(
+    internal func baseResolve<Service, Arguments>(
         name: String?,
         invoker: @escaping ((Arguments) -> Any) -> Any
     ) -> Service? {
@@ -56,7 +56,7 @@ public final class Container: DependencyContainer {
     }
     
     public func resolve<Service>(type: Service.Type, name: String?) -> Service! {
-        _resolve(name: name) { (factory: (Resolver) -> Any) in factory(self) }
+        baseResolve(name: name) { (factory: (Resolver) -> Any) in factory(self) }
     }
     
     public func resolve<Service>(type: Service.Type) -> Service! {

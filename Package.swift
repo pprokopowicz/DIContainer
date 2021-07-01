@@ -14,7 +14,8 @@ let package = Package(
     products: [
         .library(
             name: "Container",
-            targets: ["Container"]),
+            targets: ["Container"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/Quick/Nimble.git", from: "9.2.0"),
@@ -23,13 +24,15 @@ let package = Package(
     targets: [
         .target(
             name: "Container",
-            dependencies: []),
+            dependencies: []
+        ),
         .testTarget(
             name: "ContainerTests",
             dependencies: [
                 .target(name: "Container"),
                 .product(name: "Nimble", package: "Nimble"),
                 .product(name: "Quick", package: "Quick")
-            ]),
+            ]
+        )
     ]
 )

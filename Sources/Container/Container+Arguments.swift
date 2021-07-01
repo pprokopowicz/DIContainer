@@ -12,14 +12,14 @@ public extension Container {
         name: String?,
         factory: @escaping (Resolver, Arg0) -> Service
     ) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
 
     func register<Service, Arg0>(
         type: Service.Type,
         factory: @escaping (Resolver, Arg0) -> Service
     ) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
 
     func register<Service, Arg0, Arg1>(
@@ -27,14 +27,14 @@ public extension Container {
         name: String?,
         factory: @escaping (Resolver, Arg0, Arg1) -> Service
     ) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
 
     func register<Service, Arg0, Arg1>(
         type: Service.Type,
         factory: @escaping (Resolver, Arg0, Arg1) -> Service
     ) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2>(
@@ -42,14 +42,14 @@ public extension Container {
         name: String?,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2) -> Service
     ) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2>(
         type: Service.Type,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2) -> Service
     ) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3>(
@@ -57,14 +57,14 @@ public extension Container {
         name: String?,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3) -> Service
     ) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3>(
         type: Service.Type,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3) -> Service
     ) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(
@@ -72,14 +72,14 @@ public extension Container {
         name: String?,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4) -> Service
     ) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(
         type: Service.Type,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4) -> Service
     ) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(
@@ -87,14 +87,14 @@ public extension Container {
         name: String?,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5) -> Service
     ) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(
         type: Service.Type,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5) -> Service
     ) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(
@@ -102,14 +102,14 @@ public extension Container {
         name: String?,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) -> Service
     ) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(
         type: Service.Type,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) -> Service
     ) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(
@@ -117,14 +117,14 @@ public extension Container {
         name: String?,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) -> Service
     ) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(
         type: Service.Type,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) -> Service
     ) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(
@@ -132,14 +132,14 @@ public extension Container {
         name: String?,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) -> Service
     ) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(
         type: Service.Type,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) -> Service
     ) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(
@@ -147,14 +147,14 @@ public extension Container {
         name: String?,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) -> Service
     ) {
-        _register(type: type, name: name, factory: factory)
+        baseRegister(type: type, name: name, factory: factory)
     }
 
     func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(
         type: Service.Type,
         factory: @escaping (Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) -> Service
     ) {
-        _register(type: type, factory: factory)
+        baseRegister(type: type, factory: factory)
     }
     
     func resolve<Service, Arg0>(
@@ -163,7 +163,7 @@ public extension Container {
         argument: Arg0
     ) -> Service! {
         typealias FactoryType = ((Resolver, Arg0)) -> Any
-        return _resolve(name: name) { (factory: FactoryType) in factory((self, argument)) }
+        return baseResolve(name: name) { (factory: FactoryType) in factory((self, argument)) }
     }
     
     func resolve<Service, Arg0>(
@@ -180,7 +180,7 @@ public extension Container {
         _ argument1: Arg1
     ) -> Service! {
         typealias FactoryType = ((Resolver, Arg0, Arg1)) -> Any
-        return _resolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1)) }
+        return baseResolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1)) }
     }
 
     func resolve<Service, Arg0, Arg1>(
@@ -199,7 +199,7 @@ public extension Container {
         _ argument2: Arg2
     ) -> Service! {
         typealias FactoryType = ((Resolver, Arg0, Arg1, Arg2)) -> Any
-        return _resolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2)) }
+        return baseResolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2)) }
     }
 
     func resolve<Service, Arg0, Arg1, Arg2>(
@@ -220,7 +220,7 @@ public extension Container {
         _ argument3: Arg3
     ) -> Service! {
         typealias FactoryType = ((Resolver, Arg0, Arg1, Arg2, Arg3)) -> Any
-        return _resolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3)) }
+        return baseResolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3)) }
     }
 
     func resolve<Service, Arg0, Arg1, Arg2, Arg3>(
@@ -243,7 +243,7 @@ public extension Container {
         _ argument4: Arg4
     ) -> Service! {
         typealias FactoryType = ((Resolver, Arg0, Arg1, Arg2, Arg3, Arg4)) -> Any
-        return _resolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4)) }
+        return baseResolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4)) }
     }
 
     func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(
@@ -268,7 +268,7 @@ public extension Container {
         _ argument5: Arg5
     ) -> Service! {
         typealias FactoryType = ((Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5)) -> Any
-        return _resolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4, argument5)) }
+        return baseResolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4, argument5)) }
     }
 
     func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(
@@ -295,7 +295,7 @@ public extension Container {
         _ argument6: Arg6
     ) -> Service! {
         typealias FactoryType = ((Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6)) -> Any
-        return _resolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4, argument5, argument6)) }
+        return baseResolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4, argument5, argument6)) }
     }
 
     func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(
@@ -324,7 +324,7 @@ public extension Container {
         _ argument7: Arg7
     ) -> Service! {
         typealias FactoryType = ((Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7)) -> Any
-        return _resolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7)) }
+        return baseResolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7)) }
     }
 
     func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(
@@ -355,7 +355,7 @@ public extension Container {
         _ argument8: Arg8
     ) -> Service! {
         typealias FactoryType = ((Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8)) -> Any
-        return _resolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8)) }
+        return baseResolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8)) }
     }
 
     func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(
@@ -388,7 +388,7 @@ public extension Container {
         _ argument9: Arg9
     ) -> Service! {
         typealias FactoryType = ((Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9)) -> Any
-        return _resolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8, argument9)) }
+        return baseResolve(name: name) { (factory: FactoryType) in factory((self, argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8, argument9)) }
     }
 
     func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(

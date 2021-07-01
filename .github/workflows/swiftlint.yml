@@ -1,0 +1,32 @@
+name: SwiftLint
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/swiftlint.yml'
+      - '.swiftlint.yml'
+      - '**/*.swift'
+
+jobs:
+  SwiftLint:
+    name: SwiftLint
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: CommitUpdater
+        if: github.event_name == 'pull_request'
+        uses: ouzi-dev/commit-status-updater@v1.1.0
+
+      - name: "SwiftLint changed files"
+        uses: norio-nomura/action-swiftlint@3.1.0
+        env:
+          DIFF_BASE: ${{ github.base_ref }}
+
+      - name: CommitUpdater final
+        if: always() && github.event_name == 'pull_request'
+        uses: ouzi-dev/commit-status-updater@v1.1.0
+        with:
+          status: "${{ job.status }}"
