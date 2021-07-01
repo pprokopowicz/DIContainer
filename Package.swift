@@ -18,7 +18,7 @@ let package = Package(
             targets: ["DIContainer"]
         ),
         .library(
-            name: "DIContainerBin",
+            name: "DIContainerBinary",
             targets: ["DIContainerBinary"]
         )
     ],
