@@ -63,8 +63,4 @@ public final class Container: DependencyContainer {
         resolve(type: type, name: nil)
     }
     
-    public func testMe() {
-        print("IDK JUST GH ACTION TEST")
-    }
-    
 }
