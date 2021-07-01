@@ -42,4 +42,5 @@ jobs:
         author_name: GithubAction
         author_email: p.prokopowicz1@gmail.com
         message: 'XCFramework built'
+        branch: develop
 
