@@ -1,9 +1,8 @@
 name: Build XCFramework
 
-permissions: write-all
-
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches: [ develop ]
   workflow_dispatch:
     branches: [ main, develop ]
