@@ -1,0 +1,116 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DIContainer
+import Swift
+extension Container {
+  final public func register<Service, Arg0>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0) -> Service)
+  final public func register<Service, Arg0>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0) -> Service)
+  final public func register<Service, Arg0, Arg1>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1) -> Service)
+  final public func register<Service, Arg0, Arg1>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) -> Service)
+  final public func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) -> Service)
+  final public func resolve<Service, Arg0>(type: Service.Type, name: Swift.String?, argument: Arg0) -> Service!
+  final public func resolve<Service, Arg0>(type: Service.Type, argument: Arg0) -> Service!
+  final public func resolve<Service, Arg0, Arg1>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1) -> Service!
+  final public func resolve<Service, Arg0, Arg1>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8, _ argument9: Arg9) -> Service!
+  final public func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8, _ argument9: Arg9) -> Service!
+}
+final public class Container : DIContainer.DependencyContainer {
+  public static let shared: DIContainer.Container
+  public init()
+  final public func register<Service>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver) -> Service)
+  final public func register<Service>(type: Service.Type, factory: @escaping (DIContainer.Resolver) -> Service)
+  final public func resolve<Service>(type: Service.Type, name: Swift.String?) -> Service!
+  final public func resolve<Service>(type: Service.Type) -> Service!
+  @objc deinit
+}
+public typealias DependencyContainer = DIContainer.Registrant & DIContainer.Resolver
+@_hasMissingDesignatedInitializers final public class DependencyKey : Swift.Hashable, Swift.Equatable {
+  final public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: DIContainer.DependencyKey, rhs: DIContainer.DependencyKey) -> Swift.Bool
+  @objc deinit
+  final public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol Registrant {
+  func register<Service>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver) -> Service)
+  func register<Service>(type: Service.Type, factory: @escaping (DIContainer.Resolver) -> Service)
+  func register<Service, Arg0>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0) -> Service)
+  func register<Service, Arg0>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0) -> Service)
+  func register<Service, Arg0, Arg1>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1) -> Service)
+  func register<Service, Arg0, Arg1>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1) -> Service)
+  func register<Service, Arg0, Arg1, Arg2>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2) -> Service)
+  func register<Service, Arg0, Arg1, Arg2>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) -> Service)
+  func register<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(type: Service.Type, factory: @escaping (DIContainer.Resolver, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9) -> Service)
+}
+public protocol Resolver {
+  func resolve<Service>(type: Service.Type, name: Swift.String?) -> Service!
+  func resolve<Service>(type: Service.Type) -> Service!
+  func resolve<Service, Arg0>(type: Service.Type, name: Swift.String?, argument: Arg0) -> Service!
+  func resolve<Service, Arg0>(type: Service.Type, argument: Arg0) -> Service!
+  func resolve<Service, Arg0, Arg1>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1) -> Service!
+  func resolve<Service, Arg0, Arg1>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8, _ argument9: Arg9) -> Service!
+  func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8, _ argument9: Arg9) -> Service!
+}
+public typealias FunctionType = Any
+@_hasMissingDesignatedInitializers final public class ServiceEntry<Service> {
+  @objc deinit
+}

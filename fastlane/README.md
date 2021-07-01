@@ -21,6 +21,11 @@ or alternatively using `brew install fastlane`
 fastlane mac tests
 ```
 Container SPM
+### mac build_xcframework
+```
+fastlane mac build_xcframework
+```
+
 
 ----
 

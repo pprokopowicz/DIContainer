@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Container",
+    name: "DIContainer",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15),
@@ -13,8 +13,13 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Container",
-            targets: ["Container"]
+            name: "DIContainer",
+            type: .dynamic,
+            targets: ["DIContainer"]
+        ),
+        .library(
+            name: "DIContainerBinary",
+            targets: ["DIContainerBinary"]
         )
     ],
     dependencies: [
@@ -23,13 +28,17 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Container",
+            name: "DIContainer",
             dependencies: []
         ),
+        .binaryTarget(
+            name: "DIContainerBinary",
+            path: "framework/DIContainer.xcframework"
+        ),
         .testTarget(
-            name: "ContainerTests",
+            name: "DIContainerTests",
             dependencies: [
-                .target(name: "Container"),
+                .target(name: "DIContainer"),
                 .product(name: "Nimble", package: "Nimble"),
                 .product(name: "Quick", package: "Quick")
             ]

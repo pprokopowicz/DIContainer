@@ -16,16 +16,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: CommitUpdater
-        if: github.event_name == 'pull_request'
-        uses: ouzi-dev/commit-status-updater@v1.1.0
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.0
+        with:
+          access_token: ${{ github.token }}  
 
       - name: "SwiftLint changed files"
         uses: norio-nomura/action-swiftlint@3.1.0
         env:
           DIFF_BASE: ${{ github.base_ref }}
 
-      - name: CommitUpdater final
+      - name: CommitUpdater
         if: always() && github.event_name == 'pull_request'
         uses: ouzi-dev/commit-status-updater@v1.1.0
         with:

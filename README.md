@@ -1,4 +1,4 @@
-# Container
+# DIContainer
 
-Container is a simple, easy to use and lightweight dependency injection library written in pure Swift.
+DIContainer is a simple, easy to use and lightweight dependency injection library written in pure Swift.
 

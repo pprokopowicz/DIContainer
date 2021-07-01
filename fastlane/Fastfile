@@ -23,4 +23,8 @@ platform :mac do
       configuration: "release"
     )
   end
+
+  lane :build_xcframework do
+    spm_build_xcframework()
+  end
 end
