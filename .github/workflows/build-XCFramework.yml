@@ -30,6 +30,10 @@ jobs:
         ruby-version: 2.7.2
         bundler-cache: true
 
+    - name: Run tests
+      run: |
+        bundle exec fastlane tests
+  
     - name: Build XCFramework
       run: |
         bundle exec fastlane build_xcframework
@@ -41,6 +45,8 @@ jobs:
         git config --local user.email "p.prokopowicz1@gmail.com"
         git config --local user.name "GhithubAction"
         git commit -a -m "XCFramework built"
+
+        git remote set-url origin "$(git config --get remote.origin.url | sed 's#http.*com/#git@github.com:#g')"
 
         git push
 
