@@ -60,4 +60,4 @@ xcodebuild -create-xcframework \
 -framework Release-appletvsimulator.xcarchive/Products/usr/local/lib/$NAME.framework \
 -framework Release-watchos.xcarchive/Products/usr/local/lib/$NAME.framework \
 -framework Release-watchsimulator.xcarchive/Products/usr/local/lib/$NAME.framework \
--output $NAME.xcframework
+-output "framework/$NAME.xcframework"
