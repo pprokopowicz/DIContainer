@@ -12,8 +12,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: ouzi-dev/commit-status-updater@v1.1.0
-    - name: Run tests
-      run: swift test
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.7.2'
+    - uses: maierj/fastlane-action@v2.0.1
+      with:
+        lane: 'beta'
     - if: always()
       uses: ouzi-dev/commit-status-updater@v1.1.0
       with:
