@@ -15,7 +15,7 @@ let package = Package(
         .library(
             name: "DIContainer",
             type: .dynamic,
-            targets: ["DIContainer"]
+            targets: ["DIContainer", "DIContainerBinary"]
         )
     ],
     dependencies: [
