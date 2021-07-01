@@ -3,18 +3,33 @@ name: Swift
 on:
   pull_request:
     branches: [ main, develop ]
+  workflow_dispatch:
+    branches: [ main, develop ]
 
 jobs:
-  build:
-
+  test:
+    name: Tests
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: ouzi-dev/commit-status-updater@v1.1.0
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    - name: CommitUpdater
+      uses: ouzi-dev/commit-status-updater@v1.1.0
+
+    - name: Setup ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.2
+        bundler-cache: true
+
     - name: Run tests
-      run: swift test
-    - if: always()
+      run: |
+        bundle exec fastlane tests
+
+    - name: CommitUpdater final
+      if: always()
       uses: ouzi-dev/commit-status-updater@v1.1.0
       with:
         status: "${{ job.status }}"
