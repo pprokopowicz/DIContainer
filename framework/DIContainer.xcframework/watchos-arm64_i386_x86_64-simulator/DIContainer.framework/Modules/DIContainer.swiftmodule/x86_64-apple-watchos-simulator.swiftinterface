@@ -51,6 +51,7 @@ final public class Container : DIContainer.DependencyContainer {
   final public func register<Service>(type: Service.Type, factory: @escaping (DIContainer.Resolver) -> Service)
   final public func resolve<Service>(type: Service.Type, name: Swift.String?) -> Service!
   final public func resolve<Service>(type: Service.Type) -> Service!
+  final public func testMe()
   @objc deinit
 }
 public typealias DependencyContainer = DIContainer.Registrant & DIContainer.Resolver
