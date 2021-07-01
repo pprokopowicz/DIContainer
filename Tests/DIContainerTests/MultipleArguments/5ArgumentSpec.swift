@@ -7,7 +7,7 @@
 
 import Quick
 import Nimble
-import Container
+import DIContainer
 
 final class FiveArgumentsSpec: QuickSpec {
     
