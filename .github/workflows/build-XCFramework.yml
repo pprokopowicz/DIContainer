@@ -20,10 +20,6 @@ jobs:
       with:
         access_token: ${{ github.token }}    
 
-    - name: CommitUpdater
-      if: github.event_name == 'pull_request'
-      uses: ouzi-dev/commit-status-updater@v1.1.0
-
     - name: Setup ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -46,7 +42,7 @@ jobs:
         author_email: p.prokopowicz1@gmail.com
         message: 'XCFramework built'
 
-    - name: CommitUpdater final
+    - name: CommitUpdater
       if: always() && github.event_name == 'pull_request'
       uses: ouzi-dev/commit-status-updater@v1.1.0
       with:

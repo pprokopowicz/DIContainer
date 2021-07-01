@@ -21,16 +21,12 @@ jobs:
         with:
           access_token: ${{ github.token }}  
 
-      - name: CommitUpdater
-        if: github.event_name == 'pull_request'
-        uses: ouzi-dev/commit-status-updater@v1.1.0
-
       - name: "SwiftLint changed files"
         uses: norio-nomura/action-swiftlint@3.1.0
         env:
           DIFF_BASE: ${{ github.base_ref }}
 
-      - name: CommitUpdater final
+      - name: CommitUpdater
         if: always() && github.event_name == 'pull_request'
         uses: ouzi-dev/commit-status-updater@v1.1.0
         with:
