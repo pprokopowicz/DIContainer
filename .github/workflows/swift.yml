@@ -3,19 +3,18 @@ name: Swift
 on:
   pull_request:
     branches: [ main, develop ]
+  workflow_dispatch:
+    branches: [ main, develop ]
 
 jobs:
-  build:
-
+  test:
     runs-on: macos-latest
-
     steps:
     - uses: actions/checkout@v2
     - uses: ouzi-dev/commit-status-updater@v1.1.0
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2.7.2'
-        bundler-cache: true
     - run: bundle exec rake
     - uses: maierj/fastlane-action@v2.0.1
       with:
