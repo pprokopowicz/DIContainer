@@ -1,5 +1,7 @@
 name: Build XCFramework
 
+permissions: write-all
+
 on:
   push:
     branches: [ develop ]
@@ -37,22 +39,4 @@ jobs:
         author_name: GithubAction
         author_email: p.prokopowicz1@gmail.com
         message: 'XCFramework built'
-        push: false
-    
-    - name: CommitUpdater SwiftLint
-      if: always() && github.event_name == 'push'
-      uses: ouzi-dev/commit-status-updater@v1.1.0
-      with:
-        status: "success"
-        name: "GithubActions - SwiftLint"
-        
-    - name: CommitUpdater Tests
-      if: always() && github.event_name == 'push'
-      uses: ouzi-dev/commit-status-updater@v1.1.0
-      with:
-        status: "success"
-        name: "GithubActions - Tests"
-    
-    - name: Push
-      run: |
-        git push
+
