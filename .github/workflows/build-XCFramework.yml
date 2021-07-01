@@ -49,11 +49,12 @@ jobs:
 
         git config --local user.email "p.prokopowicz1@gmail.com"
         git config --local user.name "GhithubAction"
-        git commit -a -m "XCFramework built"
 
         git remote set-url origin "$(git config --get remote.origin.url | sed 's#http.*com/#git@github.com:#g')"
+        git checkout ${{ steps.extract_branch.outputs.branch }}
+        git commit -a -m "XCFramework built"
 
-        git push origin HEAD:${{ steps.extract_branch.outputs.branch }}
+        git push origin
 
     - name: CommitUpdater final
       if: always() && github.event_name == 'pull_request'
