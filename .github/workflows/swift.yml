@@ -30,8 +30,7 @@ jobs:
         bundle exec fastlane tests
 
     - name: CommitUpdater final
-      if: always()
-      if: github.event_name == 'pull_request'
+      if: always() && github.event_name == 'pull_request'
       uses: ouzi-dev/commit-status-updater@v1.1.0
       with:
         status: "${{ job.status }}"
