@@ -1,0 +1,36 @@
+name: Tests
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+    branches: [ main, develop ]
+
+jobs:
+  xcframework:
+    name: Build XCFramework
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    - name: CommitUpdater
+      if: github.event_name == 'pull_request'
+      uses: ouzi-dev/commit-status-updater@v1.1.0
+
+    - name: Setup ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.2
+        bundler-cache: true
+
+    - name: Run tests
+      run: |
+        bundle exec fastlane build_xcframework
+
+    - name: CommitUpdater final
+      if: always() && github.event_name == 'pull_request'
+      uses: ouzi-dev/commit-status-updater@v1.1.0
+      with:
+        status: "${{ job.status }}"
