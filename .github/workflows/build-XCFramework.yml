@@ -38,23 +38,30 @@ jobs:
       run: |
         bundle exec fastlane build_xcframework
     
-    - name: Extract branch name
-      shell: bash
-      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-      id: extract_branch
+    # - name: Extract branch name
+    #   shell: bash
+    #   run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+    #   id: extract_branch
 
+    # - name: Commit framework
+    #   run: |
+    #     git add framework/
+
+    #     git config --local user.email "p.prokopowicz1@gmail.com"
+    #     git config --local user.name "GhithubAction"
+
+    #     git remote set-url origin "$(git config --get remote.origin.url | sed 's#http.*com/#git@github.com:#g')"
+    #     git checkout ${{ steps.extract_branch.outputs.branch }}
+    #     git commit -a -m "XCFramework built"
+
+    #     git push origin
     - name: Commit framework
-      run: |
-        git add framework/
-
-        git config --local user.email "p.prokopowicz1@gmail.com"
-        git config --local user.name "GhithubAction"
-
-        git remote set-url origin "$(git config --get remote.origin.url | sed 's#http.*com/#git@github.com:#g')"
-        git checkout ${{ steps.extract_branch.outputs.branch }}
-        git commit -a -m "XCFramework built"
-
-        git push origin
+      uses: EndBug/add-and-commit@v7
+      with:
+        add: 'framework'
+        author_name: GithubAction
+        author_email: p.prokopowicz1@gmail.com
+        message: 'XCFramework built'
 
     - name: CommitUpdater final
       if: always() && github.event_name == 'pull_request'
