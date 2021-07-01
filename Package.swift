@@ -27,6 +27,10 @@ let package = Package(
             name: "DIContainer",
             dependencies: []
         ),
+        .binaryTarget(
+            name: "DIContainerBinary",
+            path: "framework/DIContainer.xcframework"
+        ),
         .testTarget(
             name: "DIContainerTests",
             dependencies: [
