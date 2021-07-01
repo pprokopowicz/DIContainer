@@ -52,6 +52,8 @@ for PLATFORM in "iOS" "iOS Simulator" "OS X" "tvOS" "tvOS Simulator" "watchOS" "
     cp -r $SWIFT_MODULE_PATH $MODULES_PATH
 done
 
+rm -r framework
+
 xcodebuild -create-xcframework \
 -framework Release-iphoneos.xcarchive/Products/usr/local/lib/$NAME.framework \
 -framework Release-iphonesimulator.xcarchive/Products/usr/local/lib/$NAME.framework \
