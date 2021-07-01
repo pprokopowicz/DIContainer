@@ -1,6 +1,8 @@
 name: Tests
 
 on:
+  pull_request:
+    branches: [ main, develop ]
   workflow_dispatch:
     branches: [ main, develop ]
 
@@ -27,3 +29,9 @@ jobs:
     - name: Run tests
       run: |
         bundle exec fastlane tests
+    
+    - name: CommitUpdater
+      if: always() && github.event_name == 'pull_request'
+      uses: ouzi-dev/commit-status-updater@v1.1.0
+      with:
+        status: "${{ job.status }}"

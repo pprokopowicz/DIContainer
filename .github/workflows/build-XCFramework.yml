@@ -1,8 +1,8 @@
 name: Build XCFramework
 
 on:
-  pull_request:
-    branches: [ main, develop ]
+  push:
+    branches: [ develop ]
   workflow_dispatch:
     branches: [ main, develop ]
 
@@ -25,10 +25,6 @@ jobs:
       with:
         ruby-version: 2.7.2
         bundler-cache: true
-
-    - name: Run tests
-      run: |
-        bundle exec fastlane tests
   
     - name: Build XCFramework
       run: |
@@ -41,9 +37,3 @@ jobs:
         author_name: GithubAction
         author_email: p.prokopowicz1@gmail.com
         message: 'XCFramework built'
-
-    - name: CommitUpdater
-      if: always() && github.event_name == 'pull_request'
-      uses: ouzi-dev/commit-status-updater@v1.1.0
-      with:
-        status: "${{ job.status }}"
