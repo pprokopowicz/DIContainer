@@ -38,6 +38,11 @@ jobs:
       run: |
         bundle exec fastlane build_xcframework
     
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+
     - name: Commit framework
       run: |
         git add framework/
@@ -48,7 +53,7 @@ jobs:
 
         git remote set-url origin "$(git config --get remote.origin.url | sed 's#http.*com/#git@github.com:#g')"
 
-        git push
+        git push origin HEAD:${{ steps.extract_branch.outputs.branch }}
 
     - name: CommitUpdater final
       if: always() && github.event_name == 'pull_request'
