@@ -14,6 +14,8 @@ jobs:
     if: github.event.pull_request.merged == true
 
     steps:
+    - name: Print BRANCH
+      run: echo "$CI_TARGET_BRANCH"
     - name: Checkout
       uses: actions/checkout@v2
       with:
