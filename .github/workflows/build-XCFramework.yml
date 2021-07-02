@@ -19,7 +19,7 @@ jobs:
 
     steps:
     - name: Print BRANCH
-      run: echo "$CI_TARGET_BRANCH"
+      run: echo "${{ env.CI_TARGET_BRANCH }}"
     - name: Checkout
       uses: actions/checkout@v2
       with:
