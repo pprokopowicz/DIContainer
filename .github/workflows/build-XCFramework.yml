@@ -21,8 +21,6 @@ jobs:
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
       id: extract_branch
 
-    - name: Print BRANCH
-      run: echo "${{ steps.extract_branch.outputs.branch }}"
     - name: Checkout
       uses: actions/checkout@v2
       with:
