@@ -11,20 +11,18 @@ on:
 
 jobs:
   xcframework:
-    env:
-      CI_TARGET_BRANCH: "${{ GITHUB_REF##*/ }}"
     name: Build XCFramework
     runs-on: macos-latest
     if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
 
     steps:
     - name: Print BRANCH
-      run: echo "${{ env.CI_TARGET_BRANCH }}"
+      run: echo "${{ GITHUB_REF##*/ }}"
     - name: Checkout
       uses: actions/checkout@v2
       with:
         token: ${{ secrets.CI_TOKEN }}
-        ref: ${{ env.CI_TARGET_BRANCH }}
+        ref: ${{ GITHUB_REF##*/ }}
 
     - name: Cancel Previous Runs
       uses: styfle/cancel-workflow-action@0.9.0
@@ -48,5 +46,5 @@ jobs:
         author_name: GithubAction
         author_email: p.prokopowicz1@gmail.com
         message: 'XCFramework built'
-        branch: ${{ env.CI_TARGET_BRANCH }}
+        branch: ${{ GITHUB_REF##*/ }}
 
