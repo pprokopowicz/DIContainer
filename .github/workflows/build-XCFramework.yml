@@ -16,13 +16,18 @@ jobs:
     if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
 
     steps:
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+
     - name: Print BRANCH
-      run: echo "${{ GITHUB_REF##*/ }}"
+      run: echo "${{ steps.extract_branch.outputs.branch }}"
     - name: Checkout
       uses: actions/checkout@v2
       with:
         token: ${{ secrets.CI_TOKEN }}
-        ref: ${{ GITHUB_REF##*/ }}
+        ref: ${{ steps.extract_branch.outputs.branch }}
 
     - name: Cancel Previous Runs
       uses: styfle/cancel-workflow-action@0.9.0
@@ -46,5 +51,5 @@ jobs:
         author_name: GithubAction
         author_email: p.prokopowicz1@gmail.com
         message: 'XCFramework built'
-        branch: ${{ GITHUB_REF##*/ }}
+        branch: ${{ steps.extract_branch.outputs.branch }}
 
