@@ -8,11 +8,11 @@ on:
       CI_TARGET_BRANCH: develop
   workflow_dispatch:
     branches: [ main, develop ]
-    env:
-      CI_TARGET_BRANCH: ${GITHUB_REF##*/}
 
 jobs:
   xcframework:
+    env:
+      CI_TARGET_BRANCH: ${GITHUB_REF##*/}
     name: Build XCFramework
     runs-on: macos-latest
     if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
