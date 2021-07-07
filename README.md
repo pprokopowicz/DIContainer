@@ -1,7 +1,7 @@
 DIContainer
 ========
 [![SwiftLint](https://github.com/pprokopowicz/DIContainer/actions/workflows/tests.yml/badge.svg?branch=develop)](https://github.com/pprokopowicz/DIContainer/actions/workflows/tests.yml)
-[![License](https://img.shields.io/github/license/pprokopowicz/DIContainer.svg)](https://github.com/pprokopowicz/DIContainer/actions/workflows/tests.yml)
+[![License](https://img.shields.io/github/license/pprokopowicz/DIContainer.svg)](LICENSE.md)
 [![Swift Version](https://img.shields.io/badge/Swift-5.1_5.2_5.3_5.4-orange?style=flat)](https://swift.org/)
 
 DIContainer is a simple, easy to use and lightweight [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) library written in pure Swift.  
