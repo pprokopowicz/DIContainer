@@ -54,14 +54,6 @@ final public class Container : DIContainer.DependencyContainer {
   @objc deinit
 }
 public typealias DependencyContainer = DIContainer.Registrant & DIContainer.Resolver
-@_hasMissingDesignatedInitializers final public class DependencyKey : Swift.Hashable, Swift.Equatable {
-  final public func hash(into hasher: inout Swift.Hasher)
-  public static func == (lhs: DIContainer.DependencyKey, rhs: DIContainer.DependencyKey) -> Swift.Bool
-  @objc deinit
-  final public var hashValue: Swift.Int {
-    get
-  }
-}
 public protocol Registrant {
   func register<Service>(type: Service.Type, name: Swift.String?, factory: @escaping (DIContainer.Resolver) -> Service)
   func register<Service>(type: Service.Type, factory: @escaping (DIContainer.Resolver) -> Service)
@@ -109,8 +101,4 @@ public protocol Resolver {
   func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8) -> Service!
   func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(type: Service.Type, name: Swift.String?, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8, _ argument9: Arg9) -> Service!
   func resolve<Service, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9>(type: Service.Type, arguments argument0: Arg0, _ argument1: Arg1, _ argument2: Arg2, _ argument3: Arg3, _ argument4: Arg4, _ argument5: Arg5, _ argument6: Arg6, _ argument7: Arg7, _ argument8: Arg8, _ argument9: Arg9) -> Service!
-}
-public typealias FunctionType = Any
-@_hasMissingDesignatedInitializers final public class ServiceEntry<Service> {
-  @objc deinit
 }
