@@ -1,11 +1,10 @@
 name: Build XCFramework
 
 on:
-  pull_request:
-    types: [ closed ]
+  push:
     branches: [ develop ]
-    env:
-      CI_TARGET_BRANCH: develop
+    paths:
+      - 'Sources/**'
   workflow_dispatch:
     branches: [ main, develop ]
 
