@@ -43,5 +43,6 @@ let package = Package(
                 .product(name: "Quick", package: "Quick")
             ]
         )
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
