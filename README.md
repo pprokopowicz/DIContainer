@@ -66,4 +66,4 @@ For more detailed example chek out [example project](Example).
 
 ## License
 
-MIT license. See the [LICENSE file](LICENSE) for details.
+MIT license. See the [LICENSE file](LICENSE.md) for details.
