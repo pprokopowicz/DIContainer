@@ -16,15 +16,11 @@
 default_platform(:mac)
 
 platform :mac do
-  desc "Container SPM"
+  desc "DIContainer SPM"
   lane :tests do
     spm(
       command: "test",
       configuration: "release"
     )
-  end
-
-  lane :build_xcframework do
-    spm_build_xcframework()
   end
 end
