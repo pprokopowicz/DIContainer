@@ -2,7 +2,7 @@ DIContainer
 ========
 [![SwiftLint](https://github.com/pprokopowicz/DIContainer/actions/workflows/tests.yml/badge.svg?branch=develop)](https://github.com/pprokopowicz/DIContainer/actions/workflows/tests.yml)
 [![License](https://img.shields.io/github/license/pprokopowicz/DIContainer.svg)](LICENSE.md)
-[![Swift Version](https://img.shields.io/badge/Swift-5.1_5.2_5.3_5.4-orange?style=flat)](https://swift.org/)
+[![Swift Version](https://img.shields.io/badge/Swift-5.1_5.2_5.3_5.4_5.5-orange?style=flat)](https://swift.org/)
 
 DIContainer is a simple, easy to use and lightweight [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) library written in pure Swift.  
 Heavly inspired by [Swinject](https://github.com/Swinject/Swinject).
@@ -26,17 +26,6 @@ dependencies: [
     .package(url: "https://github.com/pprokopowicz/DIContainer.git", from: "1.0.0")
 ]
 ```
-This package provides two products:
-- `DIContainer`: default SPM library.
-- `DIContainerBinary`: precompiled XCFramework.
-
-### Manually
-
-It is possible to compile XCFramework yourself with fastlane.
-```bash
-fastlane build_xcframework
-```
-When fastlane finishes built XCFramework will be found in `/framework`
 
 ## Usage
 
