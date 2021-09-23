@@ -5,6 +5,8 @@
 //  Created by Piotr Prokopowicz on 28/06/2021.
 //
 
+import DIContainer
+
 protocol Character {
     var name: String { get }
 }
@@ -18,5 +20,21 @@ class Jedi: Character {
     
     init(name: String) {
         self.name = name
+    }
+}
+
+struct FirstAssembly: Assembly {
+    func assemble(registrant: Registrant) {
+        registrant.register(type: Smuggler.self) { _ in
+            Smuggler(name: "Han")
+        }
+    }
+}
+
+struct SecondAssembly: Assembly {
+    func assemble(registrant: Registrant) {
+        registrant.register(type: Jedi.self) { _ in
+            Jedi(name: "Luke")
+        }
     }
 }
