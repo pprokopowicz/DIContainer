@@ -11,13 +11,14 @@ import DIContainer
 @main
 struct ExampleApp: App {
     
-    init() {
-        DIAssembler.assemble(with: Container.shared)
-    }
+    private let assembler: Assembler = .init(container: Container(), assemblies: [
+        ViewModelAssembly(),
+        NetworkingAssembly()
+    ])
     
     var body: some Scene {
         WindowGroup {
-            TodosView(viewModel: Container.shared.resolve(type: TodosViewModel.self))
+            TodosView(viewModel: assembler.resolver.resolve(type: TodosViewModel.self))
         }
     }
 }

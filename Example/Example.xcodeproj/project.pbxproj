@@ -11,7 +11,6 @@
 		2492C35F26962BC0001ED8BD /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492C35E26962BC0001ED8BD /* TodosView.swift */; };
 		2492C36126962BC1001ED8BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2492C36026962BC1001ED8BD /* Assets.xcassets */; };
 		2492C36426962BC1001ED8BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2492C36326962BC1001ED8BD /* Preview Assets.xcassets */; };
-		2492C36C26962C0B001ED8BD /* DIContainer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2492C36B26962C0B001ED8BD /* DIContainer.xcframework */; };
 		2492C36E26962C5F001ED8BD /* DIAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492C36D26962C5F001ED8BD /* DIAssembler.swift */; };
 		2492C37026962DB8001ED8BD /* TodosViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492C36F26962DB8001ED8BD /* TodosViewModelProtocol.swift */; };
 		2492C37226962DE9001ED8BD /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492C37126962DE9001ED8BD /* TodoModel.swift */; };
@@ -19,6 +18,7 @@
 		2492C37626962F0C001ED8BD /* TodosDataSourceScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492C37526962F0C001ED8BD /* TodosDataSourceScheme.swift */; };
 		2492C37826963A23001ED8BD /* TodosDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492C37726963A23001ED8BD /* TodosDataSource.swift */; };
 		2492C37A26963B83001ED8BD /* TodosDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492C37926963B83001ED8BD /* TodosDataSourceMock.swift */; };
+		24D9735426FD25A200558F2E /* DIContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 24D9735326FD25A200558F2E /* DIContainer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,6 @@
 		2492C36026962BC1001ED8BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2492C36326962BC1001ED8BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2492C36526962BC1001ED8BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2492C36B26962C0B001ED8BD /* DIContainer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DIContainer.xcframework; path = ../../framework/DIContainer.xcframework; sourceTree = "<group>"; };
 		2492C36D26962C5F001ED8BD /* DIAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIAssembler.swift; sourceTree = "<group>"; };
 		2492C36F26962DB8001ED8BD /* TodosViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewModelProtocol.swift; sourceTree = "<group>"; };
 		2492C37126962DE9001ED8BD /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		2492C37526962F0C001ED8BD /* TodosDataSourceScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosDataSourceScheme.swift; sourceTree = "<group>"; };
 		2492C37726963A23001ED8BD /* TodosDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosDataSource.swift; sourceTree = "<group>"; };
 		2492C37926963B83001ED8BD /* TodosDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosDataSourceMock.swift; sourceTree = "<group>"; };
+		24D9735126FD254000558F2E /* DIContainer */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DIContainer; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2492C36C26962C0B001ED8BD /* DIContainer.xcframework in Frameworks */,
+				24D9735426FD25A200558F2E /* DIContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,8 +53,10 @@
 		2492C35026962BBF001ED8BD = {
 			isa = PBXGroup;
 			children = (
+				24D9735026FD254000558F2E /* Packages */,
 				2492C35B26962BC0001ED8BD /* Example */,
 				2492C35A26962BC0001ED8BD /* Products */,
+				24D9735226FD25A200558F2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,7 +71,6 @@
 		2492C35B26962BC0001ED8BD /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				2492C36B26962C0B001ED8BD /* DIContainer.xcframework */,
 				2492C35C26962BC0001ED8BD /* ExampleApp.swift */,
 				2492C35E26962BC0001ED8BD /* TodosView.swift */,
 				2492C36F26962DB8001ED8BD /* TodosViewModelProtocol.swift */,
@@ -94,6 +95,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		24D9735026FD254000558F2E /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				24D9735126FD254000558F2E /* DIContainer */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		24D9735226FD25A200558F2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +126,9 @@
 			dependencies = (
 			);
 			name = Example;
+			packageProductDependencies = (
+				24D9735326FD25A200558F2E /* DIContainer */,
+			);
 			productName = Example;
 			productReference = 2492C35926962BC0001ED8BD /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -360,6 +379,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24D9735326FD25A200558F2E /* DIContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DIContainer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2492C35126962BBF001ED8BD /* Project object */;
 }
