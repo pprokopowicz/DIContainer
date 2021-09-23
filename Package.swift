@@ -14,12 +14,7 @@ let package = Package(
     products: [
         .library(
             name: "DIContainer",
-            type: .dynamic,
             targets: ["DIContainer"]
-        ),
-        .library(
-            name: "DIContainerBinary",
-            targets: ["DIContainerBinary"]
         )
     ],
     dependencies: [
@@ -30,10 +25,6 @@ let package = Package(
         .target(
             name: "DIContainer",
             dependencies: []
-        ),
-        .binaryTarget(
-            name: "DIContainerBinary",
-            path: "framework/DIContainer.xcframework"
         ),
         .testTarget(
             name: "DIContainerTests",
